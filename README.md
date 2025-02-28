@@ -30,8 +30,8 @@ To test and compare the strategies and determine the best among them after a set
     Some examples include - Brier score and log score.
 
     Given that $\hat{p} =$ predicted probability, $X =$ actual outcome -
-    - $\text{Brier}(\hat{p}, X) = (\hat{p}-X)^2$
-    - $\text{LogScore}(\hat{p}, X) = \begin{cases} ln(\hat{p}), & \text{if } X = 1 \\ ln(1-\hat{p}), & \text{if } X = 0\end{cases}$
+    - $$\text{Brier}(\hat{p}, X) = (\hat{p}-X)^2$$
+    - $$\text{LogScore}(\hat{p}, X) = \begin{cases} ln(\hat{p}), & \text{if } X = 1 \\ ln(1-\hat{p}), & \text{if } X = 0\end{cases}$$
    </details>
 
 2. **Define the repeated setup**
@@ -42,7 +42,7 @@ To test and compare the strategies and determine the best among them after a set
 
     Some examples include -
 
-    - **Bayesian**: Maintain $\text{Beta}(\alpha,\beta$)$ for $p$. If partial or full feedback is given, update it. Guess the posterior mean each round (for Brier/log, that’s typically optimal).
+    - **Bayesian**: Maintain $\text{Beta}(\alpha,\beta)$ for $p$. If partial or full feedback is given, update it. Guess the posterior mean each round (for Brier/log, that’s typically optimal).
     - **Frequentist**: Track the fraction of “heads” deduced from partial feedback or from actual coin outcomes (if revealed). Guess that fraction.
     - **Always $p$ (simple baselines)**.
     - **Noisy or Adaptive**: E.g., add random shifts, “If I see poor payoff, guess a different number next time.”
